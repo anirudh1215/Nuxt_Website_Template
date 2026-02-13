@@ -1,5 +1,6 @@
 {
-  "name": "nuxt_website_template",
+  "name": "nuxt-business-portfolio-template",
+  "description": "Production-ready Nuxt 4 business portfolio website starter template with SSR, Tailwind CSS, and TypeScript.",
   "type": "module",
   "private": true,
   "scripts": {
@@ -13,5 +14,8 @@
     "nuxt": "^4.3.1",
     "vue": "^3.5.28",
     "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.13.2"
   }
 }
