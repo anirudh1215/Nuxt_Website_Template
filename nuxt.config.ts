@@ -8,7 +8,15 @@ export default defineNuxtConfig({
   // SSR enabled for SEO & performance
   ssr: true,
 
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
+
+  // Site URL for sitemap & SEO (used by @nuxtjs/sitemap)
+  site: {
+    url: siteConfig.url,
+  },
+
+  // Sitemap — auto-discovers all Nuxt pages
+  sitemap: {},
 
   // Global CSS
   css: ["~/assets/css/main.css"],
@@ -49,6 +57,11 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+
+  // Redirect /sitemap to /sitemap.xml
+  routeRules: {
+    "/sitemap": { redirect: "/sitemap.xml" },
   },
 
   // Nitro server config
