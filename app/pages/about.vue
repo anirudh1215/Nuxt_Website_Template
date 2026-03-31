@@ -12,24 +12,47 @@ useSEO({
 
 const values = [
     {
-        icon: "🎯",
+        icon: "ph:crosshair-duotone",
         title: "Purpose-Driven",
         description: "Every project starts with understanding your goals and ends with measurable results.",
     },
     {
-        icon: "🤝",
+        icon: "ph:handshake-duotone",
         title: "Collaborative",
         description: "We work as an extension of your team, ensuring transparency and alignment throughout.",
     },
     {
-        icon: "🚀",
+        icon: "ph:rocket-launch-duotone",
         title: "Innovation-First",
         description: "We leverage cutting-edge tools and technologies to give your business a competitive edge.",
     },
     {
-        icon: "✨",
+        icon: "ph:sparkle-duotone",
         title: "Quality Obsessed",
         description: "Attention to detail is in our DNA. We deliver polished work that stands the test of time.",
+    },
+];
+
+const faqs = [
+    {
+        question: "What industries do you work with?",
+        answer: "We work across a wide range of industries including technology, healthcare, finance, retail, and non-profits. Our solutions are tailored to each sector's unique challenges.",
+    },
+    {
+        question: "How long does a typical project take?",
+        answer: "Project timelines vary based on scope and complexity. A branding project may take 4–6 weeks, while a full website build can range from 8–16 weeks. We'll provide a clear timeline during our initial consultation.",
+    },
+    {
+        question: "Do you offer ongoing support after launch?",
+        answer: "Yes! We offer maintenance and support packages to keep your digital products running smoothly, including updates, monitoring, and priority bug fixes.",
+    },
+    {
+        question: "What is your pricing model?",
+        answer: "We offer both project-based and retainer pricing models. Every engagement starts with a discovery phase to accurately scope and quote the work.",
+    },
+    {
+        question: "Can you work with our existing brand guidelines?",
+        answer: "Absolutely. We're experienced in working within established brand systems, ensuring consistency while bringing fresh creative energy to your projects.",
     },
 ];
 </script>
@@ -74,9 +97,9 @@ const values = [
                 <div v-for="value in values" :key="value.title"
                     class="bg-white p-8 text-center shadow-sm border border-secondary-100"
                     style="border-radius: var(--radius)">
-                    <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center text-2xl"
+                    <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center"
                         style="border-radius: var(--radius); background: color-mix(in srgb, var(--color-primary) 10%, #fff)">
-                        {{ value.icon }}
+                        <Icon :name="value.icon" class="h-7 w-7" style="color: var(--color-primary)" />
                     </div>
                     <h3 class="mb-2 text-lg font-semibold" style="color: var(--color-text)">
                         {{ value.title }}
@@ -105,6 +128,12 @@ const values = [
             <p class="mt-8 text-center text-sm" style="color: var(--color-text-muted)">
                 Replace with your actual team members in the page component.
             </p>
+        </UiSectionWrapper>
+
+        <!-- FAQ Section -->
+        <UiSectionWrapper title="Frequently Asked Questions"
+            subtitle="Answers to common questions about working with us." alt>
+            <UiFaqSection :items="faqs" />
         </UiSectionWrapper>
 
         <!-- CTA -->

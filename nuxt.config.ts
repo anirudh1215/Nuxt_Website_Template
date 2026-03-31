@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   // SSR enabled for SEO & performance
   ssr: true,
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap", "@nuxt/icon"],
 
   // Site URL for sitemap & SEO (used by @nuxtjs/sitemap)
   site: {

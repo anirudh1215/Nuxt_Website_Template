@@ -18,9 +18,9 @@ defineProps<Props>();
   >
     <!-- Icon -->
     <div
-      class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-2xl transition-colors duration-300 group-hover:bg-primary-100"
+      class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 transition-colors duration-300 group-hover:bg-primary-100"
     >
-      {{ icon }}
+      <Icon :name="icon" class="h-7 w-7 text-primary-600" />
     </div>
 
     <!-- Title -->

@@ -36,6 +36,14 @@ useHead({
 /** Show only first 3 services on homepage */
 const previewServices = site.services.slice(0, 3);
 
+/** Impact metrics for the About preview */
+const impactMetrics = [
+    { icon: "ph:calendar-check-duotone", value: 10, suffix: "+", label: "Years of Experience" },
+    { icon: "ph:folder-open-duotone", value: 200, suffix: "+", label: "Projects Delivered" },
+    { icon: "ph:smiley-duotone", value: 50, suffix: "+", label: "Happy Clients" },
+    { icon: "ph:trophy-duotone", value: 15, suffix: "+", label: "Awards Won" },
+];
+
 /** Scroll animation refs */
 const { elementRef: aboutRef } = useScrollAnimation();
 const { elementRef: servicesRef } = useScrollAnimation();
@@ -95,24 +103,7 @@ const { elementRef: ctaRef } = useScrollAnimation();
                         Learn More About Us
                     </UiAppButton>
                 </div>
-                <div class="flex items-center justify-center p-12"
-                    style="border-radius: var(--radius); background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 10%, #fff), color-mix(in srgb, var(--color-primary) 20%, #fff))">
-                    <div class="text-center">
-                        <div class="text-6xl font-extrabold" style="color: var(--color-primary)">10+</div>
-                        <p class="mt-2 text-lg font-medium" style="color: var(--color-text-muted)">Years of Experience
-                        </p>
-                        <div class="mt-6 flex justify-center gap-8">
-                            <div>
-                                <div class="text-3xl font-bold" style="color: var(--color-text)">200+</div>
-                                <p class="text-sm" style="color: var(--color-text-muted)">Projects Delivered</p>
-                            </div>
-                            <div>
-                                <div class="text-3xl font-bold" style="color: var(--color-text)">50+</div>
-                                <p class="text-sm" style="color: var(--color-text-muted)">Happy Clients</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <UiImpactMetrics :metrics="impactMetrics" />
             </div>
         </UiSectionWrapper>
 

@@ -135,42 +135,43 @@ export const siteConfig: SiteConfig = {
     { label: "Home", to: "/" },
     { label: "About", to: "/about" },
     { label: "Services", to: "/services" },
+    { label: "Gallery", to: "/gallery" },
     { label: "Contact", to: "/contact" },
   ],
 
   services: [
     {
-      icon: "💡",
+      icon: "ph:lightbulb-duotone",
       title: "Strategy & Consulting",
       description:
         "We work with you to define a clear roadmap that aligns your vision with measurable business outcomes.",
     },
     {
-      icon: "🎨",
+      icon: "ph:palette-duotone",
       title: "Brand & Design",
       description:
         "From logos to full brand systems, we craft visual identities that resonate with your audience.",
     },
     {
-      icon: "🖥️",
+      icon: "ph:monitor-duotone",
       title: "Web Development",
       description:
         "Modern, fast, and accessible websites built with the latest technologies for optimal performance.",
     },
     {
-      icon: "📈",
+      icon: "ph:chart-line-up-duotone",
       title: "Digital Marketing",
       description:
         "Data-driven campaigns across SEO, social media, and paid channels to grow your reach.",
     },
     {
-      icon: "📱",
+      icon: "ph:device-mobile-duotone",
       title: "Mobile Apps",
       description:
         "Native and cross-platform mobile applications designed for seamless user experiences.",
     },
     {
-      icon: "🔧",
+      icon: "ph:wrench-duotone",
       title: "Maintenance & Support",
       description:
         "Ongoing technical support, updates, and monitoring to keep your digital products running smoothly.",
